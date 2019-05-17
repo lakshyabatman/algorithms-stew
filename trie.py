@@ -44,8 +44,7 @@ class Trie:
 def main():
 
     keys = ["the","a","there","anaswe","any","by","their"] 
-    output = ["Not present in trie","Present in trie"] 
-  
+    output = ["Not present in trie","Present in trie"]  
     t = Trie() 
   
     for key in keys: 
