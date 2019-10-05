@@ -15,9 +15,11 @@ def KnapSack(val,wt,maxWeight):
     
     return K[n][maxWeight]
 
-
+#Weight Array
 wt=[1,3,4,5]
+#Value Array
 val=[1,4,5,7]
+#Maximum Weight
 maxWeight=7
 k=KnapSack(val=val,wt=wt,maxWeight=maxWeight)
 print(k)
