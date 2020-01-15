@@ -9,9 +9,7 @@ def rotateArr(ar,rotate):
         temp= ar[i]
         j = i
         while(1):
-            k = (j+rotate)
-            if(k>=len(ar)):
-                k = k-len(ar)
+            k = (j+rotate)%len(ar)
             if(k==i):
                 break
             ar[j] = ar[k]
@@ -20,6 +18,6 @@ def rotateArr(ar,rotate):
     print(ar)
 
 myArr =[1,2,3,4,5,6]
-rotate = 2
+rotate = 3
 
 rotateArr(myArr,rotate)
