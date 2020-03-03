@@ -1,9 +1,16 @@
 # algorithms-stew
-Algorithms using Python 🐍
+# Installation
 
-Dynamic Programming Examples Using Python3.7 🐍
+For interview preps, you have to ace your algorithms stack, and I got you! ;)
 
-To run this code on your local machine, you need Python 2.7+
-<br>
-<h5>Type</h5>
-<code>python3 "FILE-NAME"</code>
+### Prerequisites
+- GCC/G++ Complier
+- Python 3+
+
+## Getting Started
+- <code>git clone {repo name}</code>
+- <code>cd algorithms-stew</code>
+- Use your compiler or interpretor to run files.
+
+## Contributing Guidelines
+To get started, please look over contributing.md
