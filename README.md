@@ -13,4 +13,4 @@ For interview preps, you have to ace your algorithms stack, and I got you! ;)
 - Use your compiler or interpretor to run files.
 
 ## Contributing Guidelines
-To get started, please look over contributing.md
+To get started, please look over <a href="CONTRIBUTING.md">contributing.md</a>
