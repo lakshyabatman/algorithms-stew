@@ -13,17 +13,17 @@ def KadaneAlgo(arr):
             resultMax = currentMax
             maxStart = start
             end = i
-    maxEnd = end
-        
-    # Here comes for removing an bug:
-    '''
-    the end always go the indices last checked even if it shouldn't be part of maxArr, 
-        so maxEnd should be decreased by one, except when there is only +ve number till end of arr.
-    '''
-    # if end == len(arr)-1:
-    #     if arr[end] > 0:
-    #         maxEnd-=1
+    maxEnd = end 
     return [maxStart,maxEnd]
 
-arr = [-1, 1,2,3, 8, - 7, - 9]
-print(KadaneAlgo(arr))
+def KadaneAlgo2(arr):
+    [maxStart,maxEnd]=KadaneAlgo(arr)
+    if maxStart < 0 and maxStart == maxEnd:
+            return
+    return arr[maxStart:maxEnd+1]
+
+test = [
+    [0,0,-1,0],
+    [-1,-1]
+]
+print(KadaneAlgo2(test[0]))
