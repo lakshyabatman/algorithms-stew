@@ -20,3 +20,14 @@ def insert(root,value):
                 root.right = Node(value)
             else:
                 insert(root.right,value)
+def preorder(root):
+    if root is not None:
+        print(root.value)
+        preorder(root.left)
+        preorder(root.right)
+        
+def inorder(root):
+    if root is not None:
+        inorder(root.left)
+        print(root.value)
+        inorder(root.right)
