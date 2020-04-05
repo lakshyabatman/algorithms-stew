@@ -31,3 +31,10 @@ def inorder(root):
         inorder(root.left)
         print(root.value)
         inorder(root.right)
+
+root = Node(4)
+insert(root,3)
+insert(root,5)
+insert(root,6)
+insert(root,1)
+insert(root,10)

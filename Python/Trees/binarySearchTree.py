@@ -1,10 +1,4 @@
 from BST import *
-def inorder(root):
-    if root is not None:
-        print(root.value)
-        inorder(root.left)
-        inorder(root.right)
-
 def findMin(root):
     if root is not None:
         tmp = root
