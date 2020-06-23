@@ -1,5 +1,8 @@
 from BST import *
 def findMin(root):
+    '''
+        Iterates to left most node and returns it's value!
+    '''
     if root is not None:
         tmp = root
         while(tmp.left!=None):
@@ -8,6 +11,9 @@ def findMin(root):
 
 
 def findMax(root):
+    '''
+        Iterates to right most node and returns it's value!
+    '''
     if root is not None:
         tmp = root
         while(tmp.right!=None):
@@ -15,6 +21,12 @@ def findMax(root):
         return tmp.value
 
 def findHeight(root):
+    '''
+        The idea is to find iterate to last node recursively to each side and returns maximum value + 1
+                A   height = max(0,0)+1 => 1
+             /     \
+            B       C  height = max(-1,-1)+1 => 0
+    '''
     if root is None:
         return -1
     leftHeight = findHeight(root.left)
@@ -22,6 +34,16 @@ def findHeight(root):
     return max(leftHeight,rightHeight)+1
 
 def findDepth(root,value,depth=0):
+    '''
+        Irritating to all levels with depth = 0 to the target and incrementing depth on each passed level , till we reach target and retun value of depth.
+        Make point: We're irritating left or right based on current root's value and target value
+        Target = D
+                A   A> D ,depth = 0
+            //     \
+            B       C   B> D , depth = 1
+        //       \   
+        D       E   Fount D , depth =2
+    '''
     tmp=depth
     if root is  None:
         print("Value not found")
@@ -35,6 +57,9 @@ def findDepth(root,value,depth=0):
         findDepth(root.right,value,depth=tmp)
 
 def BFS(root):
+    '''
+        BFS => Breath First Search, The concept is that it goes to each level and irritate all nodes on that level, QUEUE is used for that 
+    '''
     queue = []
     queue.append(root)
     while len(queue)!=0:
@@ -46,6 +71,9 @@ def BFS(root):
             queue.append(tmp1.right)
         
 def DFS(root):
+    '''
+        DFS => Depth First Search, we irritate deep first till very end,STACK is used,=.
+    '''
     stack = []
     stack.append(root)
     while len(stack)!=0:
