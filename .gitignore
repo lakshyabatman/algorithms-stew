@@ -1,3 +1,4 @@
 playground.py
-./*.out
-**/output.out
+*.out
+**/*.out
+C++/*.dSYM/
