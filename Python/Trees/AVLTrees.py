@@ -1,58 +1,67 @@
-class Node:
+class AVLTREE:
     def __init__(self,value):
         self.value = value
         self.left = None
         self.right = None
-
-def insert(root,value):
-    if root is None:
-        root = Node(value)
-        return root
-    else:
-        if(root.value> value):
-            if root.left is None:
-                root.left = Node(value)
-            else:
-                insert(root.left,value)
+        self.height = 1
+    def insert(self,root,value):
+        if not root:
+            return AVLTREE(value)
+        elif value > root.value:
+            root.right = self.insert(root.right,value)
         else:
-            if root.right is None:
-                root.right = Node(value)
-            else:
-                insert(root.right,value)
-    balance = getBalance(root)
-    if(balance> 1 or balance<-1):
-        if balance>1:
-            # Disbalance comes from left side
-            if root.left.right is None:
-                # We need to run left rotate
-                print("Left rotate")
-                # root = leftRotate(root)
-            else:
-                # Have to left right rotate
-                print("Hello")
+            root.left = self.insert(root.left,value)
+        
+        root.height = 1+ max(self.getHeight(root.left) , self.getHeight(root.right))
+        balance = self.getBalance(root)
 
- 
+        if balance > 1 and value<root.left.value:
+            return self.leftRotate(root)
 
-def getBalance(root):
-    leftHeight = findHeight(root.left)
-    rightHeight = findHeight(root.right)
-    return abs(rightHeight-leftHeight)
-
-def findHeight(root):
-    if root is None:
-        return -1
-    leftHeight = findHeight(root.left)
-    rightHeight = findHeight(root.right)
-    return max(leftHeight,rightHeight)+1
-
-def leftRotate(root):
-    tmp = root.left
-    tmp.right = root
-    return tmp
-
+        if balance > 1 and value > root.left.value:
+            root.left = self.rightRotate(root.left)
+            return self.leftRotate(root)
+        
+        if balance < -1 and value > root.right.value:
+            return self.rightRotate(root)
+        
+        if balance < -1 and value < root.right.value:
+            #Right left rotate
+            root.right = self.leftRotate(root.right)
+            return self.rightRotate(root)
+        
+        return root
+    def getHeight(self,root):
+        if not root:
+            return 0
+        return root.height
     
-root = Node(3)
-insert(root,2)
-insert(root,1)
-insert(root,4)
-insert(root,5)
+    def getBalance(self,root):
+        if not root:
+            return 0
+        return self.getHeight(root.left) - self.getHeight(root.right)
+    
+    def leftRotate(self,root):
+        if not root.left:
+            return root
+        temp = root.left
+        root.left = temp.right
+        temp.right = root
+        return temp
+    
+    def rightRotate(self,root):
+        if not root.right:
+            return root
+        temp = root.right
+        root.right = temp.left
+        temp.left = root
+        return temp
+
+
+
+newTree = AVLTREE(5)
+newTree = newTree.insert(newTree,7)
+newTree =newTree.insert(newTree,6)
+print(newTree.value)
+# newTree =newTree.insert(newTree,4)
+# newTree.insert(newTree,1)
