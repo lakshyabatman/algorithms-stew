@@ -12,7 +12,7 @@ vector<vector<int> > Graph::findSCC() {
   this->adj = reverseGraph();
   //TODO: Do DFS and get vector<vector<int>>
   for(int i =0;i<visit.size(); i++ ){
-    visit[i] = false;
+    visit[i] = false
   }
   vector<vector<int>> res;
   getSCC(res,st,visit);
