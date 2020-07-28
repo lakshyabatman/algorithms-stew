@@ -19,8 +19,10 @@ class Graph {
     void DFS(int s , vector<bool> &visits);
     void DFS(int s, stack<int> &st , vector<bool> &visits);
     void DFS(int s , vector<bool> &visits,vector<int> &curr);
+    bool detectCycleHelper(int s , vector<bool> &visits,vector<bool> &recurStac);
     void getSCC(vector<vector<int>> &res,stack<int> &st , vector<bool> &visits);
     int findMotherVertex();
+    bool detectCycle();
     list<int> * reverseGraph();
     vector<vector<int> > findSCC();
     
