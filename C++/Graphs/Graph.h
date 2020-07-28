@@ -25,6 +25,8 @@ class Graph {
     bool detectCycle();
     list<int> * reverseGraph();
     vector<vector<int> > findSCC();
+    void TopologicalSort();
+    void TopologicalSortUtil(int s,stack<int> &st, vector<bool> &visits);
     
 };
 
