@@ -26,7 +26,9 @@ class Graph {
     list<int> * reverseGraph();
     vector<vector<int> > findSCC();
     void TopologicalSort();
+    vector<int> topologicalSort();
     void TopologicalSortUtil(int s,stack<int> &st, vector<bool> &visits);
+    void maximumEdgeAddtion();
     
 };
 
