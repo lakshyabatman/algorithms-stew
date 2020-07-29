@@ -31,7 +31,7 @@ class Graph {
     void maximumEdgeAddtion();
     void allTopologicalSort();
     void allTopologicalSortUtil(vector<int> &res, vector<int> &inDegree,vector<bool> &visited);
-    
+    void TransitiveClosure();
 };
 
 
