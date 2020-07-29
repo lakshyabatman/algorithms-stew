@@ -29,6 +29,8 @@ class Graph {
     vector<int> topologicalSort();
     void TopologicalSortUtil(int s,stack<int> &st, vector<bool> &visits);
     void maximumEdgeAddtion();
+    void allTopologicalSort();
+    void allTopologicalSortUtil(vector<int> &res, vector<int> &inDegree,vector<bool> &visited);
     
 };
 
