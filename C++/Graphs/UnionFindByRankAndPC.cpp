@@ -20,22 +20,21 @@ int findParent(vector<pair<int,int>> &subsets, int x) {
 
 void unionSet(vector<pair<int,int>> &subsets, int x, int y) {
   int xroot = findParent(subsets, x); 
-    int yroot = findParent(subsets, y); 
+  int yroot = findParent(subsets, y); 
   
-    // Attach smaller rank tree under root of high rank tree 
-    // (Union by Rank) 
-    if (subsets[xroot].second < subsets[yroot].second) 
-        subsets[xroot].first = yroot; 
-    else if (subsets[xroot].second > subsets[yroot].second) 
-        subsets[yroot].first = xroot; 
+  // Attach smaller rank tree under root of high rank tree 
+  // (Union by Rank) 
+  if (subsets[xroot].second < subsets[yroot].second) 
+    subsets[xroot].first = yroot; 
+  else if (subsets[xroot].second > subsets[yroot].second) 
+    subsets[yroot].first = xroot; 
   
-    // If ranks are same, then make one as root and increment 
-    // its rank by one 
-    else
-    { 
-        subsets[yroot].first = xroot; 
-        subsets[xroot].second++; 
-    } 
+  // If ranks are same, then make one as root and increment 
+  // its rank by one 
+  else { 
+    subsets[yroot].first = xroot; 
+    subsets[xroot].second++; 
+  } 
 }
 
 bool Graph::detectCycle() {
