@@ -13,7 +13,7 @@ using namespace std;
 vector<int> findDuplicates(vector<int> arr) {
   vector<int> res;
   for(int i =0;i<arr.size();i++) {
-    if(arr[abs(arr[i])%arr.size()]>=0) {
+    if(arr[abs(arr[i])%arr.size()]>=0) { // or can use arr[i]+=n and if (arr/n >1) means duplicate exist!
       arr[abs(arr[i])%arr.size()]= -arr[abs(arr[i])%arr.size()];
     }else {
       res.push_back(abs(arr[i]));
