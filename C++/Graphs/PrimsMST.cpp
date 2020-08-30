@@ -40,6 +40,7 @@ void primMST (int Graph[V][V]) {
       if(Graph[u][v] &&  mstSet[v] == false && Graph[u][v] <key[v]) {
         parent[v] = u;
         key[v] = Graph[u][v];
+
       }
     }
   }
