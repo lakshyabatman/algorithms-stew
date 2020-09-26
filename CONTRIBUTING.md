@@ -1,134 +1,138 @@
-*Git Installation
+1. Git Installation
 
--> Install git depending on operating system from official site to run git terminal (Bash).
+	1. Install git depending on operating system from official site to run git terminal (Bash).
 
--> Now when successfully installed git next step is to set a environment for development and to learn basic git commands.
-
-
-
-**Getting link for Cloning
-
--> First go to the git repository for which you want to contribute.
--> Now fork that repository so that the copy of that same project will create in your repository.
--> Now go to the green code button on the top left of that repository to copy the https link for that repository.
--> Copy that link to clipboard.
+	2. Now when successfully installed git next step is to set a environment for development and to learn basic git commands.
 
 
 
-***Cloning 
+2. Getting link for Cloning
 
--> Make an new empty folder.
-
--> Open git terminal and run cd folder_location
-	example cd Desktop/git-project
-
--> run git init.
-
--> Now run git clone (copied link) to clone that project to local system.
+	1. First go to the git repository for which you want to contribute.
+	2. Now fork that repository so that the copy of that same project will create in your repository.
+	3. Now go to the green code button on the top left of that repository to copy the https link for that repository.
+	4. Copy that link to clipboard.
 
 
 
-****Runnning Cpp in terminal
+3. Cloning 
 
-1. Before running programs we must set the path of compiler. So, first right click on Computer icon and go to Properties option.
+	1. Make an new empty folder.
 
-2. Click on Advance system settings and then Environment Variables.
+	2. Open git terminal and run cd folder_location
+		example cd Desktop/git-project
 
-3. A new window will open, there click on New button. In Variable name filed enter path and in Variable value filed enter the path of the bin folder of compiler.
+	3. run git init.
 
-4. You can find the path of bin folder by going to the directory where you have installed the compiler.
-
-5. After that click all OK buttons to save the information.
-
-6. Press Win+R keys to open Run. Type cmd and press enter to open command prompt.
-
-7. Now change the directory to where you have saved your C or C++ program file. Lets say you have saved the program on Desktop then type cd desktop and press enter.
-
-8. Now for compiling the program type gcc filename. Here filename is the name of the program file. I have used gcc command because I have installed GCC compiler in my system.
-The command will change if you are using any other compiler, like for Turbo C++ it will be tcc, for Borland C++ it will be bcc and so on.
-
-9. For running the program just type the name of the source file without .c or .cpp extension and press enter.
-
-10. If you have followed steps properly then you can see the output. 
+	4. Now run git clone (copied link) to clone that project to local system.
 
 
 
+4. Runnning Cpp in terminal
 
-*****Running Python in Terminal
+	1. Before running programs we must set the path of compiler. So, first right click on Computer icon and go to Properties option.
 
-	Running a Script
-	-> Once the script has been written, save it to a specific location in your system and then follow the steps below to run it:
+	2. Click on Advance system settings and then Environment Variables.
+	
+	3. A new window will open, there click on New button. In Variable name filed enter path and in Variable value filed enter the path of the bin folder of compiler.
 
-	-> Open the terminal by searching for it in the dashboard or pressing Ctrl + Alt + T.
+	4. You can find the path of bin folder by going to the directory where you have installed the compiler.
 
-	-> Navigate the terminal to the directory where the script is located using the cd command.
+	5. After that click all OK buttons to save the information.
 
-	-> Type python SCRIPTNAME.py in the terminal to execute the script.
+	6. Press Win+R keys to open Run. Type cmd and press enter to open command prompt.
 
-	-> If the script is python3, use python3 in the terminal command:pyhton3 SCRIPTNAME.py
+	7. Now change the directory to where you have saved your C or C++ program file. Lets say you have saved the program on Desktop then type cd desktop and press enter.
 
-	Alternate method
-	-> If you find it cumbersome to write python in the terminal every time you run the script, follow the procedure below:
+	8. Now for compiling the program type gcc filename. Here filename is the name of the program file. I have used gcc command because I have installed GCC compiler in my system.
+	The command will change if you are using any other compiler, like for Turbo C++ it will be tcc, for Borland C++ it will be bcc and so on.
 
-	-> Prepend #! /usr/bin/python with your script.
+	9. For running the program just type the name of the source file without .c or .cpp extension and press enter.
 
-	-> Run the following command in your terminal to make the script executable: chmod +x SCRIPTNAME.py
-
-	-> Now, ​simply type ./SCRIPTNAME.py to run the executable script.
-
+	10. If you have followed steps properly then you can see the output. 
 
 
-*****Debug C++ in Visual Studio Code
 
--> Visual Studio Code supports the following debuggers for C/C++ depending on the operating system you are using:
 
--> Linux: GDB
--> macOS: LLDB or GDB
--> Windows: the Visual Studio Windows Debugger or GDB (using Cygwin or MinGW)
--> Download given language extension from virtual studio code extensions.
+5. Running Python in Terminal
 
- Now enter the following command to compile the source file using g++.
+	->Running a Script
 
-	-> $ g++ -o <name-you-want-to-give> source.cpp
+	1. Once the script has been written, save it to a specific location in your system and then follow the steps below to run it:
+
+	2. Open the terminal by searching for it in the dashboard or pressing Ctrl + Alt + T.
+
+	3. Navigate the terminal to the directory where the script is located using the cd command.
+
+	4. Type python SCRIPTNAME.py in the terminal to execute the script.
+
+	5. If the script is python3, use python3 in the terminal command:pyhton3 SCRIPTNAME.py
+
+	->Alternate method
+
+	1. If you find it cumbersome to write python in the terminal every time you run the script, follow the procedure below:
+
+	2. Prepend #! /usr/bin/python with your script.
+
+	3. Run the following command in your terminal to make the script executable: chmod +x SCRIPTNAME.py
+
+	4. Now, ​simply type ./SCRIPTNAME.py to run the executable script.
+
+
+
+6. Debug C++ in Visual Studio Code
+
+	1. Visual Studio Code supports the following debuggers for C/C++ depending on the operating system you are using:
+
+	1. Linux: GDB
+	2. macOS: LLDB or GDB
+	3. Windows: the Visual Studio Windows Debugger or GDB (using Cygwin or MinGW)
+	4. Download given language extension from virtual studio code extensions.
+
+ 	->Now enter the following command to compile the source file using g++.
+
+	1. $ g++ -o <name-you-want-to-give> source.cpp
 
 	In place of <name-you-want-to-give> replace it by any name like myprogram, etc.
 
-	-> Run it! Now you can run the program using −
+	2. Run it! Now you can run the program using −
 
-	-> $ ./myprogram
-
-
+	3. $ ./myprogram
 
 
-******Commit File Changes
 
--> Before running commit command you have to run add command to add the changes whatever you made to your respository.
-	i.e. git add file_name
--> Now run command commit command to save your changes to the local repository.
-	i.e. git commit -m "Succcesfully Added"
+
+7. Commit File Changes
+
+	1. Before running commit command you have to run add command to add the changes whatever you made to your respository.
+		i.e. git add file_name
+	2. Now run command commit command to save your changes to the local repository.
+		i.e. git commit -m "Succcesfully Added"
 
 	****	-m <message>
-	Sets the commit's message. Make sure to provide a concise description that helps your teammates (and yourself) understand what happened.
+		Sets the commit's message. Make sure to provide a concise description that helps your teammates (and yourself) understand what happened.
 
 	****    -a
-	Includes all currently changed files in this commit. Keep in mind, however, that untracked (new) files are not included.
+		Includes all currently changed files in this commit. Keep in mind, however, that untracked (new) files are not included.
 
 	****	--amend
-	Rewrites the very last commit with any currently staged changes and/or a new commit message.
-	Git will rewrite the last commit and effectively replace it with the amended one.
-	Note that such a rewriting of commits should only be performed on commits that have not been pushed to a remote repository, yet.
+		Rewrites the very last commit with any currently staged changes and/or a new commit message.
+		Git will rewrite the last commit and effectively replace it with the amended one.
+		Note that such a rewriting of commits should only be performed on commits that have not been pushed to a remote repository, yet.
 
-*******Git Push and Pull Request
+8. Git Push and Pull Request
 
--> First you have Push your local repository to remote server. so, that the changes you made in local repository will also appeared their.
-"push" command is used to publish new local commits on a remote server.
+	1. First you have Push your local repository to remote server. so, that the changes you made in local repository will also appeared their.
+	"push" command is used to publish new local commits on a remote server.
 
-	i.e. git push
+		i.e. git push
 
--> Then it will ask to fill your login credentials fill them. i.e. Login email , Password.
+	2. Then it will ask to fill your login credentials fill them. i.e. Login email , Password.
 
--> Once you push the changes to your repo, the Compare & pull request button will appear in GitHub.
+	3. Once you push the changes to your repo, the Compare & pull request button will appear in GitHub.
 	
-	*Open a pull request by clicking the Create pull request button.
-	*This allows the repo's maintainers to review your contribution.
-	*From here, they can merge it if it is good, or they may ask you to make some changes. 
+	4. Open a pull request by clicking the Create pull request button.
+
+	5. This allows the repo's maintainers to review your contribution.
+
+	6. From here, they can merge it if it is good, or they may ask you to make some changes. 
