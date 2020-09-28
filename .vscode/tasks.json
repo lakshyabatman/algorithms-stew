@@ -5,7 +5,6 @@
             "label": "C/C++: g++ build active file",
             "command": "/usr/bin/g++",
             "args": [
-                "-g",
                 "--std=c++11",
                 "${file}",
                 "-o",
@@ -15,7 +14,7 @@
                 "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
-                "$gcc"
+                "$g++"
             ],
             "group": {
                 "kind": "build",
