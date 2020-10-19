@@ -1,0 +1,4 @@
+playground.py
+*.out
+**/*.out
+C++/*.dSYM/
