@@ -1,4 +1,5 @@
 playground.py
 *.out
 **/*.out
+**/*.exe
 C++/*.dSYM/
