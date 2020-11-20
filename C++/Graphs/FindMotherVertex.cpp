@@ -22,6 +22,10 @@ int Graph::findMotherVertex() {
     }
     
   }
+
+  fill(visit.begin(),visit.end(),false);
+  DFS(v,visit);
+  for(auto i : visit) if(!i) return -1;
   return v;
 }
 

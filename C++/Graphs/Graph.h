@@ -32,6 +32,7 @@ class Graph {
     void allTopologicalSort();
     void allTopologicalSortUtil(vector<int> &res, vector<int> &inDegree,vector<bool> &visited);
     void TransitiveClosure();
+    void printKCores(int k);
 };
 
 
