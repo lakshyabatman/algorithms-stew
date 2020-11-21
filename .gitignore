@@ -3,3 +3,4 @@ playground.py
 **/*.out
 **/*.exe
 C++/*.dSYM/
+Typescript/node_modules
