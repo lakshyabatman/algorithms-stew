@@ -15,8 +15,13 @@ class Emoji {
         this._prev = this._icon;
         this._prev = val;
     }
+
+    static saySomething(): void {
+        console.log(this);
+    }
 }
 
 const emoji = new Emoji('<3');
 emoji.change(':3');
 console.log(emoji.icon, emoji.prev);
+Emoji.saySomething();
